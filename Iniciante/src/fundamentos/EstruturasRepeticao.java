@@ -12,6 +12,7 @@ public class EstruturasRepeticao {
 		
 		//Uso do "while"
 		int contador = 1;
+		
 		while(contador <= 10) {
 			System.out.println("*" + contador);
 			contador += 1;
@@ -19,8 +20,10 @@ public class EstruturasRepeticao {
 				
 		//Uso do "Do while"
 		char resposta = 'N';
+		
 		do { System.out.println("Deseja jogar novamente?");
 		} while (resposta == 'S');
+		
 		System.out.println("O jogo acabou.");
 	}
 }
