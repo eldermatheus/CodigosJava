@@ -1,6 +1,6 @@
 package fundamentos;
 
-public class TiposDados {
+public class _TiposDados {
 	//Teste de código
 	public static void main(String[] args) {
 		String nome = "Matheus";

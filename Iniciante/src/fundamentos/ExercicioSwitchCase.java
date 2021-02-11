@@ -2,7 +2,7 @@ package fundamentos;
 
 import java.util.Scanner;
 
-public class SwitchCase {
+public class ExercicioSwitchCase {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 

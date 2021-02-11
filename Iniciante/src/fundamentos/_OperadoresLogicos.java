@@ -1,6 +1,6 @@
 package fundamentos;
 
-public class OperadoresLogicos {
+public class _OperadoresLogicos {
 
 	// && operador "e"
 	// || operador "ou"

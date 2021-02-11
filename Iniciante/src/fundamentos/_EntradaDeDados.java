@@ -2,7 +2,7 @@ package fundamentos;
 
 import java.util.Scanner;
 
-public class entradaDeDados {
+public class _EntradaDeDados {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);

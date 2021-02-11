@@ -1,7 +1,7 @@
 package fundamentos;
 import java.util.Scanner;
 
-public class lacoWhile {
+public class ExercícioLacoWhile {
 	public static void main(String[] args) {
 					
 		Scanner ler = new Scanner(System.in);
