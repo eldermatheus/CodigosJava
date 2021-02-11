@@ -16,10 +16,9 @@ public class lacoFor {
 		for (int i = 1; i <= n; i++) {			
 			int novoNumero = ler.nextInt();
 			soma = soma + novoNumero;
-			
 		}
 		System.out.println(soma);
-		
+		ler.close();
 	}
 
 }

@@ -1,0 +1,12 @@
+package teste;
+
+public class EstruturasControle {
+	public static void main(String[] args) {
+		char resposta = 'S';
+		if (resposta == 'S') {
+			System.out.println("Sim");
+		} else System.out.println("Não");
+
+	}
+
+}

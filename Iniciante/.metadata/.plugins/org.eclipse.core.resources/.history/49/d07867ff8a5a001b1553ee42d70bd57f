@@ -1,0 +1,10 @@
+package teste;
+
+public class Inicio {
+	
+	//Teste de código
+	public static void main(String[] args) {
+		String nome = 'teste';
+		System.out.println(nome);
+	}
+}

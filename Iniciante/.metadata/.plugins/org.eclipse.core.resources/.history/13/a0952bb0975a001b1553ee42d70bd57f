@@ -1,0 +1,14 @@
+package teste;
+
+public class EstruturasControle {
+	public static void main(String[] args) {
+		String resposta = "Mu";
+		int idade = 17; 
+		if (resposta == 'M' && idade >= 18) {
+			System.out.println("Alistamento Obrigatório.");
+		} else if (resposta == 'M' && idade < 18) {
+			System.out.println("Alistamento fora da idade.");
+		} else 			
+			System.out.println("Livre do Alistamento.");
+	}
+}

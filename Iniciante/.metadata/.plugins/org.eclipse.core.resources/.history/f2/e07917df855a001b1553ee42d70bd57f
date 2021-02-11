@@ -1,0 +1,9 @@
+package teste;
+
+public class inicio {
+	
+	//rghewhehehr
+	public static void main(String[] args) {
+		System.out.println("testando código");
+	}
+}

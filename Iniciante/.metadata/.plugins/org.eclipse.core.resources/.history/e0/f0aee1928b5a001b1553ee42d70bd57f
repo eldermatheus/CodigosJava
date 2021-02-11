@@ -1,0 +1,13 @@
+package teste;
+
+public class Inicio {
+	
+	//Teste de código
+	public static void main(String[] args) {
+		String nome = "Matheus";
+		int idade = 27;
+		char sexo = 'M';
+		System.out.println("Nome: "+ nome +". "+"Sexo: "+ sexo +". ");
+		
+	}
+}

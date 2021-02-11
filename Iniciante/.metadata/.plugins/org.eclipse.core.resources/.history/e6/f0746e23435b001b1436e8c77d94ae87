@@ -1,0 +1,30 @@
+package teste;
+
+public class EstruturasControle {
+	public static void main(String[] args) {
+		String resposta = "Homem";
+		resposta = resposta.toLowerCase();
+		int idade = 17; 
+		if (resposta == "homem" && idade >= 18) {
+			System.out.println("Alistamento Obrigatório.");
+			
+		} else if (resposta == "homem" && idade < 18) {
+			System.out.println("Alistamento fora da idade.");
+			
+		} else 			
+			System.out.println("Livre do Alistamento.");
+		int variavel = 3;
+		
+		switch (variavel) { 
+			case 1:
+				System.out.println("Caso 1");
+				break;
+			case 2:
+				System.out.println("Caso 2");
+				break;
+			case 3:
+				System.out.println("Caso 3");
+				break;
+		}
+	}
+}

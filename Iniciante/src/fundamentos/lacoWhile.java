@@ -13,5 +13,7 @@ public class lacoWhile {
 			numero = ler.nextInt();					
 		}
 		System.out.println(soma);
+		
+		ler.close();
 	}
 }
