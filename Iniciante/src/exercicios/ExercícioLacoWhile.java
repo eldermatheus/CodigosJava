@@ -1,4 +1,4 @@
-package fundamentos;
+package exercicios;
 import java.util.Scanner;
 
 public class ExercícioLacoWhile {
