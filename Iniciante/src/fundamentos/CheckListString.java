@@ -1,7 +1,7 @@
 package fundamentos;
 
 public class CheckListString {
-	
+	/*
 	//Formatar
 	toLowerCase() ********** - Converte em letras minúsculas
 	toUpperCase() ********** - Converte em letras maiúsculas 
@@ -29,5 +29,5 @@ public class CheckListString {
 	String word1 = vect[0];
 	String word2 = vect[1];
 	String word3 = vect[2];
-	
+	*/
 }
