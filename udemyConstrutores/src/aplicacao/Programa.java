@@ -31,7 +31,7 @@ public class Programa {
 		
 		//Exibe o saldo
 		System.out.println();
-		System.out.println(produto);
+		System.out.println("Updated data: " + produto);
 		
 		ler.close();
 	}

@@ -22,6 +22,7 @@ public class Produto {
 				+ ", R$ "
 				+ preco
 				+ ", "
+				+ quantidade
 				+ " unidades, Total: $ "
 				+ valorTotalEstoque();
 	}

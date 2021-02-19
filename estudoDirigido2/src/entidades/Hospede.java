@@ -12,7 +12,6 @@ public class Hospede extends Pessoa{
 	}
 	
 	public void setsetQuantidadeOcupacao(int numeroOcupacoes) {
-		this.quantidadeOcupacoes = quantidadeOcupacoes;
+		this.quantidadeOcupacoes = numeroOcupacoes;
 	}
-	
 }
