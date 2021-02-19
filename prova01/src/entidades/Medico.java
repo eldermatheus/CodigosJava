@@ -5,9 +5,9 @@ import java.util.Date;
 public class Medico extends Pessoa{
 	private String crm;
 	private	String endereco;
-	int telefoneCelular;
+	private int telefoneCelular;
 	
-	public Medico(String nome, String dataDeNascimento) { 
+	public Medico(String nome, String dataDeNascimento, String crm, String endereco, int telefoneCelular) { 
 		super(nome,dataDeNascimento);
 		
 	}	

@@ -3,11 +3,11 @@ package entidades;
 import java.util.Date;
 
 public class Mae extends Pessoa{
-	String sobrenome;
-	String endereco;
-	int telefone;
+	private String sobrenome;
+	private String endereco;
+	private int telefone;
 	
-	public Mae(String nome, String dataDeNascimento) { 
+	public Mae(String nome, String dataDeNascimento,String sobrenome, String endereco, int telefone) { 
 		super(nome,dataDeNascimento);		
 	}
 	

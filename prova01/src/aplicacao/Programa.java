@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 import entidades.Pessoa;
+import entidades.Mae;
 import entidades.Medico;
 import entidades.Medicamento;
 
@@ -46,7 +47,7 @@ public class Programa {
 				String endereco = ler.nextLine();				
 				System.out.print("Telefone Celular:");
 				int telefoneCelular = ler.nextInt();
-				Pessoa.add(new Pessoa(nome, dataDeNascimento));
+				Pessoa.add(new Medico(nome, dataDeNascimento, crm, endereco, telefoneCelular));				
 			}
 			
 			if (resp == 2) {
@@ -66,7 +67,7 @@ public class Programa {
 				System.out.print("Telefone:");
 				ler.nextLine();
 				int telefone = ler.nextInt();
-				Pessoa.add(new Pessoa(nome, dataDeNascimento));	
+				Pessoa.add(new Mae(nome, dataDeNascimento, sobrenome, endereco, telefone));	
 			}
 			
 			if (resp == 3) {
@@ -85,9 +86,9 @@ public class Programa {
 				System.out.print("Nome:");
 				ler.nextLine();
 				String descricao = ler.nextLine();
-				System.out.print("Nome:");
+				System.out.print("Quantidade Estoque:");
 				int quantidadeEmEstoque = ler.nextInt();
-				System.out.print("Nome:");
+				System.out.print("Unidade Medida:");
 				ler.nextLine();
 				String unidadeMedida = ler.nextLine();
 				Medicamento.add(new Medicamento(descricao, quantidadeEmEstoque, unidadeMedida));
