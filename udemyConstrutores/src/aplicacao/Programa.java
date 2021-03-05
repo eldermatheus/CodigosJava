@@ -8,7 +8,7 @@ public class Programa {
 	public static void main(String[] args) {
 		
 		Scanner ler = new Scanner(System.in);
-		Produto produto = new Produto();
+		Produto produto = new Produto(String nome, preco,quantidade);
 		int qtde; 
 		
 		System.out.println("Entre com os dados do produto:");

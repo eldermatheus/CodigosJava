@@ -5,6 +5,14 @@ public class Produto {
 	public double preco;
 	public int quantidade;
 
+	//Cosntrutor
+	public Produto(String nome,double preco,int quantidade) {
+		this.nome = nome;
+		this.preco = preco;
+		this.quantidade = quantidade;
+	}
+	
+	//Métodos
 	public double valorTotalEstoque() {
 		return preco * quantidade;
 	}
