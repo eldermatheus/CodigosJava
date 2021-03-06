@@ -11,16 +11,17 @@ public class Programa {
 		int qtde; 
 		
 		System.out.println("Entre com os dados do produto:");
-		System.out.println("Nome: ");
+		System.out.print("Nome: ");
 		String nome = ler.nextLine();
-		System.out.println("Preco: ");
-		double preco = ler.nextDouble();
-		System.out.println("Quantidade em estoque: ");
-		int quantidade = ler.nextInt();
+		System.out.print("Preco: ");
+		double preco = ler.nextDouble();		
 		
-		Produto produto = new Produto(nome, preco, quantidade);
+		Produto produto = new Produto(nome, preco);
+		
+		System.out.println("Dados dos produtos: " + produto);
 		
 		//Adição de produtos
+		System.out.println();
 		System.out.println("Insira a quantidade de produtos adicionados:");
 		qtde = ler.nextInt();		
 		produto.adicionarProduto(qtde);
