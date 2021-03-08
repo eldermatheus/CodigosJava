@@ -1,9 +1,9 @@
 package entidades;
 
 public class Produto {
-	public String nome;
-	public double preco;
-	public int quantidade;
+	private String nome;
+	private double preco;
+	private int quantidade;
 
 	//Cosntrutor
 	public Produto(String nome,double preco,int quantidade) {
@@ -16,6 +16,27 @@ public class Produto {
 		public Produto(String nome,double preco) {
 			this.nome = nome;
 			this.preco = preco;
+	}
+	
+	// Getters e Setters	
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public double getPreco() {
+		return preco;
+	}
+	
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+	
+	public int getQuantidade() {
+		return quantidade;
 	}
 	
 	//Métodos
