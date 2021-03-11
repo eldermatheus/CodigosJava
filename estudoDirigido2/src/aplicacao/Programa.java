@@ -14,16 +14,7 @@ public class Programa {
 		int resp = 1;
 		
 		while (resp != 9) {
-			System.out.println("");
-			System.out.println("=======================================");
-			System.out.println("|1 - Incluir colaborador	      |");
-			System.out.println("|2 - Incluir hóspede		      |");
-			System.out.println("|3 - Alterar dados hóspede	      |");
-			System.out.println("|4 - Vericar disponibilidade de quarto|");	
-			System.out.println("|5 - Fazer reserva de quarto	      |");
-			System.out.println("|6 - Listar dados		      |");
-			System.out.println("|9 - Sair			      |");
-			System.out.println("=======================================");
+			Menu();
 			resp = ler.nextInt();
 		
 			if (resp == 1) {
@@ -78,9 +69,7 @@ public class Programa {
 			if (resp == 5) {
 				//Fazer reserva de quarto
 			}
-				
-				
-				
+								
 			if (resp == 6) {
 				for (Pessoa p : Pessoa) {
 					System.out.println(
@@ -94,6 +83,19 @@ public class Programa {
 							}
 			}
 					
-		} ler.close();
+		} 	
+		ler.close();
+	}
+	public static void Menu() {
+		System.out.println("");
+		System.out.println("=======================================");
+		System.out.println("|1 - Incluir colaborador	      |");
+		System.out.println("|2 - Incluir hóspede		      |");
+		System.out.println("|3 - Alterar dados hóspede	      |");
+		System.out.println("|4 - Vericar disponibilidade de quarto|");	
+		System.out.println("|5 - Fazer reserva de quarto	      |");
+		System.out.println("|6 - Listar dados		      |");
+		System.out.println("|9 - Sair			      |");
+		System.out.println("=======================================");		
 	}
 }
