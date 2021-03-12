@@ -16,7 +16,15 @@ public class Programa {
 		}		
 		
 		double media = soma / n;
-		System.out.printf("AVERAGE HEIGHT: %.2f%n", media);
+		System.out.printf("Preço médio: %.2f%n", media);
 		ler.close();
+		
+		/*Exemplo For Each
+		String[] vect = new String[] {"Maria","Bob","Alex"};
+		
+		for(String obj: vect) {
+			System.out.println(obj);
+		}
+		*/
 	}
 }
