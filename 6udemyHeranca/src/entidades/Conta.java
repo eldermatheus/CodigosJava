@@ -35,12 +35,13 @@ public class Conta {
 	public double getSaldo() {
 		return saldo;
 	}
-
-	public void withdraw(double valor) {
-		saldo -= valor;
+	
+	//saca e desconta 5 de taxa
+	public void sacar(double valor) {
+		saldo -= valor + 5.0;
 	}
 	
-	public void deposit(double valor) {
+	public void depositar(double valor) {
 		saldo += valor;
 	}
 	

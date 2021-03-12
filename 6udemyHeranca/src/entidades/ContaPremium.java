@@ -7,7 +7,7 @@ public class ContaPremium extends Conta {
 		super();
 	}
 
-	public ContaPremium(Integer numero, String titular, double saldo, Double limiteEmprestimo) {
+	public ContaPremium(Integer numero, String titular, double saldo, double limiteEmprestimo) {
 		super(numero, titular, saldo);
 		this.limiteEmprestimo = limiteEmprestimo;
 	}
