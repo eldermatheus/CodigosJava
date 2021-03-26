@@ -1,4 +1,4 @@
-package aplicacao;
+/*package aplicacao;
 
 import java.util.Scanner;
 
@@ -16,15 +16,27 @@ public class Programa {
 		}		
 		
 		double media = soma / n;
-		System.out.printf("Preço médio: %.2f%n", media);
+		System.out.printf("Média: %.2f%n", media);
 		ler.close();
 		
-		/*Exemplo For Each
+		/*--Exemplo For Each
 		String[] vect = new String[] {"Maria","Bob","Alex"};
 		
 		for(String obj: vect) {
 			System.out.println(obj);
-		}
-		*/
+		}--
+	}
+}*/
+
+package aplicacao;
+
+import java.util.Scanner;
+
+public class Programa {
+	public static void main(String[] args) {
+		
+		Scanner ler = new Scanner(System.in);
+		
+	
 	}
 }
