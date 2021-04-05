@@ -1,101 +1,63 @@
 package aplicacao;
 
-import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
 import entidades.Pessoa;
-import entidades.Colaborador;
+import entidades.Diretor;
+import entidades.Palestrante;
+import entidades.Curso;
+import entidades.Proprietario;
+import entidades.Produtora;
+
 
 public class Programa {
 
 	public static void main(String[] args) {
-		//Instanciando
-		Scanner ler = new Scanner(System.in);		
-		ArrayList<Pessoa> Pessoa = new ArrayList();
-		int resp = 1;
+		Scanner ler = new Scanner(System.in);
+		Proprietario proprietario = new Proprietario();
+		Produtora produtora = new Produtora();
 		
-		while (resp != 9) {
-			Menu();
-			resp = ler.nextInt();
-		
-			if (resp == 1) {
-				//Cadastro de colaborador
-				System.out.print("Nome:");
-				ler.nextLine();
-				String nome = ler.nextLine();					
-				System.out.print("RG:");
-				int rg = ler.nextInt();
-				System.out.print("CPF:");
-				int cpf = ler.nextInt();
-				System.out.print("Enredeço:");
-				ler.nextLine();
-				String endereco = ler.nextLine();
-				System.out.print("Telefone:");
-				int telefone = ler.nextInt();
-				System.out.print("Celular:");
-				int celular = ler.nextInt();
-				System.out.print("Email:");
-				ler.nextLine();
-				String email = ler.nextLine();
-				Pessoa.add(new Pessoa(nome, rg, cpf, endereco, telefone, celular, email));
-			}
-			
-			if (resp == 2) {
-				//Cadastro de hóspede
-				System.out.print("Nome:");
-				String nome = ler.next();
-				System.out.print("RG:");
-				int rg = ler.nextInt();
-				System.out.print("CPF:");
-				int cpf = ler.nextInt();
-				System.out.print("Enredeço:");
-				String endereco = ler.next();
-				System.out.print("Telefone:");
-				int telefone = ler.nextInt();
-				System.out.print("Celular:");
-				int celular = ler.nextInt();
-				System.out.print("Email:");
-				String email = ler.next();
-				Pessoa.add(new Pessoa(nome, rg, cpf, endereco, telefone, celular, email));
-			}
-			
-			if (resp == 3) {
-				//Alterar dados hóspede
-			}
-			
-			if (resp == 4) {
-				//Vericar disponibilidade de quarto
-			}
-			
-			if (resp == 5) {
-				//Fazer reserva de quarto
-			}
+		try {
+			Pessoa[] pessoas = new Pessoa[5];
+			int resp = 0; 
+			while(resp != 9) {
+				
+				System.out.println("===============================");
+				System.out.println("       P R O D U T O R A       ");
+				System.out.println("===============================");
+				System.out.println("Digite a sua opção:");
+				System.out.println("1 - Incluir um ator");
+				System.out.println("2 - Alterar um ator");
+				System.out.println("3 - Excluir um ator");
+				System.out.println("4 - Incluir um diretor");
+				System.out.println("5 - Listar pessoas cadastradas");
+				System.out.println("9 - Sair");
 								
-			if (resp == 6) {
-				for (Pessoa p : Pessoa) {
-					System.out.println(
-						"Nome: " + p.getNome() +
-						"\rRG: " + p.getRg() +
-						"\rCPF" + p.getCpf() + 
-						"\rEndereço: " + p.getEndereco() + 
-						"\rTelefone: " + p.getTelefone() +
-						"\rCelular: " + p.getCelular() +  
-						"\rEmail: " + p.getEmail());
-							}
+				
+				if (resp == 1) {
+					Produtora.IncluirUmAtor(ler);
+				}
+				if (resp == 2) {
+					Produtora.AlterarUmAtor(ler);
+				}
+				if(resp == 3) {
+					Produtora.AlterarUmAtor(ler);
+				}
+				if (resp == 4) {
+					 Produtora.IncluirUmDiretor(ler);
+				}
+				if (resp == 5) {
+					Produtora.ListarPessoas(pessoas);
+				}
 			}
-					
-		} 	
+		}
+		catch(InputMismatchException error) {
+			System.out.println("Valor válido!");
+		}
+		catch(NumberFormatException error) {
+			System.out.println("Número fora do range!");
+		}
 		ler.close();
-	}
-	public static void Menu() {
-		System.out.println("");
-		System.out.println("=======================================");
-		System.out.println("|1 - Incluir colaborador	      |");
-		System.out.println("|2 - Incluir hóspede		      |");
-		System.out.println("|3 - Alterar dados hóspede	      |");
-		System.out.println("|4 - Vericar disponibilidade de quarto|");	
-		System.out.println("|5 - Fazer reserva de quarto	      |");
-		System.out.println("|6 - Listar dados		      |");
-		System.out.println("|9 - Sair			      |");
-		System.out.println("=======================================");		
-	}
+	}	
 }
