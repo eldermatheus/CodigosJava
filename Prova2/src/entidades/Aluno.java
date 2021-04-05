@@ -7,8 +7,8 @@ public class Aluno extends Pessoa{
 	public Aluno() {		
 	}
 	
-	public Aluno(Integer cpf, String nome, String endereco, Integer celular, String email, Integer matriculaAcademica) {
-		super(cpf, nome, endereco, celular, email);
+	public Aluno(Integer cpf, String nome, String endereco, Integer celular, String email, String loginUsuario, String loginSenha, Integer matriculaAcademica) {
+		super(cpf, nome, endereco, celular, email, loginUsuario, loginSenha);
 		this.matriculaAcademica = matriculaAcademica;
 	}
 
@@ -19,6 +19,7 @@ public class Aluno extends Pessoa{
 	public void setMatriculaAcademica(Integer matriculaAcademica) {
 		this.matriculaAcademica = matriculaAcademica;
 	}
+	
 	
 	
 	

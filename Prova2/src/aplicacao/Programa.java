@@ -20,13 +20,14 @@ public class Programa {
 		
 					
 		Instituicao instituicao = new Instituicao(12346, "Instituto Federal de Tencnolgoia","IFS", "Rua A Nº 1", 34313431, "ifs@academico.com");
-		Professor professor = new Professor(56789, "Sidney", "Rua B Nº 2", 34313432, "sidney@academico.com", 11111);
+		Professor professor = new Professor(56789, "Sidney", "Rua B Nº 2", 34313432, "sidney@academico.com", "usu@rio1", "senha1234",11111);
 		Turma turma = new Turma("1ª Turma CCOMP", formato.parse("02/01/2020"), formato.parse("30/04/2021"), "teste", "Aluno1");
 		
 		
 		Scanner ler = new Scanner(System.in);		
 		Pessoa[] pessoa = new Pessoa[1];
 		char resp = 0;
+		int contador = 0;
 
 		//Programa principal
 		while (resp != 'x' && resp != 'X') {
@@ -49,15 +50,16 @@ public class Programa {
 			}
 			
 			if (resp == '4') {
-				Professor.IncluirAluno(ler);				
+				//Professor.IncluirAluno(ler);									
+					pessoa[contador] = Professor.IncluirAluno(ler);								
 			}
 			
 			if (resp == '5') {
-				Professor.AlterarAluno();
+				Professor.AlterarAluno(ler, pessoa);
 			}
 			
 			if (resp == '6') {
-				Professor.ExcluirAluno(ler);
+				Professor.ExcluirAluno(ler, pessoa);
 			}
 
 			if (resp == '7') {

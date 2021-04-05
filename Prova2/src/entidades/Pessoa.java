@@ -7,17 +7,22 @@ public class Pessoa {
 	private String endereco; 
 	private Integer celular; 
 	private String email;
+	private String loginUsuario;
+	private String loginSenha;
+	
 	
 	
 	public Pessoa() {		
 	}
 	
-	public Pessoa(Integer cpf, String nome, String endereco, Integer celular, String email) {
+	public Pessoa(Integer cpf, String nome, String endereco, Integer celular, String email, String loginUsuario, String loginSenha) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.endereco = endereco;
 		this.celular = celular;
 		this.email = email;
+		this.loginUsuario = loginUsuario;
+		this.loginSenha = loginSenha;
 	}
 
 	public Integer getCpf() {
@@ -60,14 +65,26 @@ public class Pessoa {
 		this.email = email;
 	}
 	
-	public static void ListarPessoas(Pessoa[] pessoa){ 
-		for (Pessoa p : pessoa) {
-			System.out.println(
-				"CPF: " + p.getCpf() +
-				"Nome: " + p.getNome() +
-				"Endereço: " + p.getEndereco() +
-				"\rCelular: " + p.getCelular() +  
-				"\rEmail: " + p.getEmail());
-		}
+	public String setUsuario() {
+		return loginUsuario;
 	}
+	
+	public void setUsuario(String loginUsuario) {
+		this.loginUsuario = loginUsuario;
+	}	
+
+	public void setSenha(String loginSenha) {
+		this.loginSenha = loginSenha;
+	}
+		
+	public static void ListarPessoas(Pessoa[] Pessoa){ 
+		for (Pessoa p : Pessoa) {
+			System.out.println(
+				" CPF: " + p.getCpf() +
+				" |Nome: " + p.getNome() +
+				" |Endereço: " + p.getEndereco() +
+				" |Celular: " + p.getCelular() +  
+				" |Email: " + p.getEmail());
+		}
+	}	
 }
