@@ -8,8 +8,6 @@ public class Instituicao {
 	private Integer telefone;
 	private String email;
 	
-
-	
 	public Instituicao() {		
 	}
 			
@@ -81,9 +79,4 @@ public class Instituicao {
 		+ ". -Telefone: " + telefone
 		+ ". -E-mail: " + email +".";
 	}
-	
-	
-			
-
-		
 }

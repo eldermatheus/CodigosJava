@@ -19,8 +19,4 @@ public class Aluno extends Pessoa{
 	public void setMatriculaAcademica(Integer matriculaAcademica) {
 		this.matriculaAcademica = matriculaAcademica;
 	}
-	
-	
-	
-	
 }

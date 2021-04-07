@@ -10,8 +10,6 @@ public class Pessoa {
 	private String loginUsuario;
 	private String loginSenha;
 	
-	
-	
 	public Pessoa() {		
 	}
 	

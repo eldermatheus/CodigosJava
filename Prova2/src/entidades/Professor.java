@@ -25,7 +25,7 @@ public class Professor extends Pessoa{
 		this.matriculaFuncional = matriculaFuncional;
 	}
 	
-	
+	//Método para inclusão de aluno
 	public static Pessoa IncluirAluno(Scanner ler) {
 		System.out.print("CPF: ");
 		Integer cpf = ler.nextInt();		
@@ -54,11 +54,11 @@ public class Professor extends Pessoa{
 		Integer matricula = ler.nextInt();
 		ler.nextLine();				
 		
-		return new Aluno(cpf, nome, endereco, celular, email, login,senha, matricula);
-	}
+		return new Aluno(cpf, nome, endereco, celular, email, login, senha, matricula);
+	}	
 	
+	//Método para alteração de aluno
 	public static void AlterarAluno(Scanner ler, Pessoa[] pessoas) {		
-		
 		for (Pessoa p : pessoas) {
 			Aluno a = (Aluno) p;
 			
@@ -79,13 +79,13 @@ public class Professor extends Pessoa{
 				
 			if(escolha == "nome") {
 				System.out.print("Novo nome?: ");
-				alteracao = ler.nextLine().toUpperCase();
+				alteracao = ler.nextLine();
 				a.setNome(alteracao);
 			}
 			
 			if(escolha == "endereco") {
 				System.out.print("Novo endereco?: ");
-				alteracao = ler.nextLine().toUpperCase();
+				alteracao = ler.nextLine();
 				a.setEndereco(alteracao);
 			}
 			
@@ -98,19 +98,19 @@ public class Professor extends Pessoa{
 			
 			if(escolha == "email") {
 				System.out.print("Novo email?: ");
-				alteracao = ler.nextLine().toLowerCase().trim();
+				alteracao = ler.nextLine();
 				a.setEmail(alteracao);
 			}
 			
 			if(escolha == "logins") {
 				System.out.print("Novo login?: ");
-				alteracao = ler.nextLine().toLowerCase().trim();
+				alteracao = ler.nextLine();
 				a.setUsuario(alteracao);
 			}
 			
 			if(escolha == "senha") {
 				System.out.print("Nova senha?: ");
-				alteracao = ler.nextLine().toLowerCase().trim();
+				alteracao = ler.nextLine();
 				a.setSenha(alteracao);
 			}
 	
@@ -123,25 +123,29 @@ public class Professor extends Pessoa{
 		}	
 	}
 	
+	//Método para exclusão de aluno
 	public static void ExcluirAluno(Scanner ler,  Pessoa[] pessoas) {		
 		System.out.print("Qual aluno deseja excluir?");
-		String nome = ler.nextLine().toUpperCase();		
+		String nome = ler.nextLine();		
 		for (int ident = 0; ident < pessoas.length; ident++) {
 			if(pessoas[ident] != null && nome.equals(pessoas[ident].getNome())) {
 				pessoas[ident] = null;
-				System.out.println("A!");
+				System.out.println("Aluno excluído!");
 			}	
 		}
 	}	
 	
+	//Método para cifrar o texto
 	public static void CifrarTexto(Scanner ler) {
 	}
 	
+	//Método para decifrar o texto
 	public static void DecifrarTexto(Scanner ler) {
 	}
 	
 	
-	@Override
+	//Método de impressão dos dados --Herdado de entidades.Instituicao
+	@Override 
 	public String toString() {
 		return 
 		"Dados do Professor"
@@ -152,5 +156,4 @@ public class Professor extends Pessoa{
 		+ ". -Celular: " + getCelular()
 		+ ". -E-mail: " + getEmail() +".";
 	}
-
 }
