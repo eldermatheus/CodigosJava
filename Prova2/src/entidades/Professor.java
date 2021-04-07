@@ -63,58 +63,58 @@ public class Professor extends Pessoa{
 			Aluno a = (Aluno) p;
 			
 			System.out.println("Escolha o dado que deseja alterar: ");
-			System.out.println("CPF; nome; endereco; celular; email; login; senha; matricula");
+			System.out.println("CPF; nome; endereco; celular; email; login;");
 			
 			String escolha = ler.nextLine().toLowerCase();;
 			
 			String alteracao;
 			Integer alteracaoInt;
 			
-			if(escolha == "cpf") {
+			if(escolha.equals("cpf")) {
 				System.out.print("Novo CPF?: ");
 				alteracaoInt = ler.nextInt();
 				a.setCpf(alteracaoInt);
 				ler.nextLine();
 			}
 				
-			if(escolha == "nome") {
+			if(escolha.equals("nome")) {
 				System.out.print("Novo nome?: ");
 				alteracao = ler.nextLine();
 				a.setNome(alteracao);
 			}
 			
-			if(escolha == "endereco") {
+			if(escolha.equals("endereco")) {
 				System.out.print("Novo endereco?: ");
 				alteracao = ler.nextLine();
 				a.setEndereco(alteracao);
 			}
 			
-			if(escolha == "celular") {
+			if(escolha.equals("celular")) {
 				System.out.print("Novo celular?: ");
 				alteracaoInt = ler.nextInt();
 				a.setCelular(alteracaoInt);	
 				ler.nextLine();
 			}
 			
-			if(escolha == "email") {
+			if(escolha.equals("email")) {
 				System.out.print("Novo email?: ");
 				alteracao = ler.nextLine();
 				a.setEmail(alteracao);
 			}
 			
-			if(escolha == "logins") {
+			if(escolha.equals("login")) {
 				System.out.print("Novo login?: ");
 				alteracao = ler.nextLine();
 				a.setUsuario(alteracao);
 			}
 			
-			if(escolha == "senha") {
+			if(escolha.equals("senha")) {
 				System.out.print("Nova senha?: ");
 				alteracao = ler.nextLine();
 				a.setSenha(alteracao);
 			}
 	
-			if(escolha == "matricula") {
+			if(escolha.equals("matricula")) {
 				System.out.print("Nova Matrícula?: ");
 				alteracaoInt = ler.nextInt();
 				a.setMatriculaAcademica(alteracaoInt);
