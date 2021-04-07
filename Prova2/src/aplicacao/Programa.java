@@ -2,12 +2,9 @@ package aplicacao;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import entidades.Pessoa;
-import entidades.Aluno;
 import entidades.Professor;
 import entidades.Turma;
 import entidades.Instituicao;

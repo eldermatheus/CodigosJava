@@ -1,9 +1,7 @@
 package entidades;
 
-import java.util.ArrayList;
 import java.util.Scanner;
-import entidades.Aluno;
-import entidades.Pessoa;
+
 
 public class Professor extends Pessoa{
 	
