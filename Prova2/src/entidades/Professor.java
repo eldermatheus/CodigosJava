@@ -10,8 +10,8 @@ public class Professor extends Pessoa{
 	public Professor() {		
 	}
 	
-	public Professor(Integer cpf, String nome, String endereço, Integer celular, String email, String loginUsuario, String loginSenha, Integer matriculaFuncional) {
-		super(cpf, nome, endereço, celular, email, loginUsuario, loginSenha);
+	public Professor(Integer cpf, String nome, String endereço, Integer celular, String email, String loginUsuario, String loginSenha, Integer matriculaFuncional, String chaveRecuperacao) {
+		super(cpf, nome, endereço, celular, email, loginUsuario, loginSenha, chaveRecuperacao);
 		this.matriculaFuncional = matriculaFuncional;
 	}
 
@@ -50,9 +50,12 @@ public class Professor extends Pessoa{
 				
 		System.out.print("Matrícula Acadêmica: ");
 		Integer matricula = ler.nextInt();
-		ler.nextLine();				
+		ler.nextLine();
 		
-		return new Aluno(cpf, nome, endereco, celular, email, login, senha, matricula);
+		System.out.print("Chave de recuperação da capsula? ");
+		String chaveRecuperacao = ler.nextLine();
+		
+		return new Aluno(cpf, nome, endereco, celular, email, login, senha, matricula, chaveRecuperacao);
 	}	
 	
 	//Método para alteração de aluno

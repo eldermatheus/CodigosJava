@@ -18,7 +18,7 @@ public class Programa {
 		
 			Instituicao instituicao = new Instituicao(12346, "Instituto Federal de Tencnolgoia","IFS", "Rua A Nº 1", 34313431, "ifs@academico.com");
 		
-			Professor professor = new Professor(56789, "Sidney", "Rua B Nº 2", 34313432, "sidney@academico.com", "usu@rio1", "senha1234",11111);
+			Professor professor = new Professor(56789, "Sidney", "Rua B Nº 2", 34313432, "sidney@academico.com", "usu@rio1", "senha1234",11111, "chave3431");
 		
 			Turma turma = new Turma("1ª Turma CCOMP", formato.parse("02/01/2020"), formato.parse("30/04/2021"), "teste", "Aluno1");		
 		

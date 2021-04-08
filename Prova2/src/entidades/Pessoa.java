@@ -9,11 +9,12 @@ public class Pessoa {
 	private String email;
 	private String loginUsuario;
 	private String loginSenha;
+	private String chaveRecuperacao;
 	
 	public Pessoa() {		
 	}
 	
-	public Pessoa(Integer cpf, String nome, String endereco, Integer celular, String email, String loginUsuario, String loginSenha) {
+	public Pessoa(Integer cpf, String nome, String endereco, Integer celular, String email, String loginUsuario, String loginSenha, String chaveRecuperacao) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.endereco = endereco;
@@ -21,6 +22,7 @@ public class Pessoa {
 		this.email = email;
 		this.loginUsuario = loginUsuario;
 		this.loginSenha = loginSenha;
+		this.chaveRecuperacao = chaveRecuperacao;
 	}
 
 	public Integer getCpf() {
@@ -74,6 +76,14 @@ public class Pessoa {
 	public void setSenha(String loginSenha) {
 		this.loginSenha = loginSenha;
 	}
+	
+	public String setChaveRecuperacao() {
+		return chaveRecuperacao;
+	}
+	
+	
+	
+	
 		
 	public static void ListarPessoas(Pessoa[] Pessoa){ 
 		for (Pessoa p : Pessoa) {
