@@ -10,7 +10,7 @@ public class Professor extends Pessoa{
 	public Professor() {		
 	}
 	
-	public Professor(Integer cpf, String nome, String endereço, Integer celular, String email, String loginUsuario, String loginSenha, Integer matriculaFuncional, String chaveRecuperacao) {
+	public Professor(String cpf, String nome, String endereço, Integer celular, String email, String loginUsuario, String loginSenha, Integer matriculaFuncional, String chaveRecuperacao) {
 		super(cpf, nome, endereço, celular, email, loginUsuario, loginSenha, chaveRecuperacao);
 		this.matriculaFuncional = matriculaFuncional;
 	}
@@ -26,9 +26,8 @@ public class Professor extends Pessoa{
 	//Método para inclusão de aluno
 	public static Pessoa IncluirAluno(Scanner ler) {
 		System.out.print("CPF: ");
-		Integer cpf = ler.nextInt();		
+		String cpf = ler.nextLine();		
 		
-		ler.nextLine();
 		System.out.print("Nome: ");
 		String nome = ler.nextLine();
 		
@@ -73,8 +72,8 @@ public class Professor extends Pessoa{
 			
 			if(escolha.equals("cpf")) {
 				System.out.print("Novo CPF?: ");
-				alteracaoInt = ler.nextInt();
-				a.setCpf(alteracaoInt);
+				alteracao = ler.nextLine();
+				a.setCpf(alteracao);
 				ler.nextLine();
 			}
 				
@@ -135,15 +134,6 @@ public class Professor extends Pessoa{
 			}	
 		}
 	}	
-	
-	//Método para cifrar o texto
-	public static void CifrarTexto(Scanner ler) {
-	}
-	
-	//Método para decifrar o texto
-	public static void DecifrarTexto(Scanner ler) {
-	}
-	
 	
 	//Método de impressão dos dados --Herdado de entidades.Instituicao
 	@Override 

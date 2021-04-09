@@ -1,13 +1,16 @@
 package aplicacao;
 
+import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import entidades.Instituicao;
 import entidades.Pessoa;
 import entidades.Professor;
 import entidades.Turma;
-import entidades.Instituicao;
+import servicos.CriptoDecripto;
 
 
 public class Programa {
@@ -18,20 +21,22 @@ public class Programa {
 		
 			Instituicao instituicao = new Instituicao(12346, "Instituto Federal de Tencnolgoia","IFS", "Rua A Nº 1", 34313431, "ifs@academico.com");
 		
-			Professor professor = new Professor(56789, "Sidney", "Rua B Nº 2", 34313432, "sidney@academico.com", "usu@rio1", "senha1234",11111, "chave3431");
+			Professor professor = new Professor("56789", "Sidney", "Rua B Nº 2", 34313432, "sidney@academico.com", "usu@rio1", "senha1234",11111, "chave3431");
 		
 			Turma turma = new Turma("1ª Turma CCOMP", formato.parse("02/01/2020"), formato.parse("30/04/2021"), "teste", "Aluno1");		
 		
 		//Abrindo o Scanner e criando o vetor
 			Scanner ler = new Scanner(System.in);	
 			
-		try {
+		
 			Pessoa[] pessoa = new Pessoa[1];
+			Date data = new Date(System.currentTimeMillis());
 			char resp = 0;
 			int contador = 0;
 
 		//Programa principal
-			while (resp != 'x' && resp != 'X') {
+			try {
+				while (resp != 'x' && resp != 'X') {
 			
 				System.out.println("");
 				System.out.println("=========================================");
@@ -81,21 +86,32 @@ public class Programa {
 				}
 	
 				if (resp == '8') {
-					Professor.CifrarTexto(ler);
+					CriptoDecripto.CifrarTexto(ler);					
 				}
 	
-				if (resp == '9') {				
-					Professor.DecifrarTexto(ler);
+				if (resp == '9') {
+					
+					//Checa se é a data certa para abrir a capsula
+					if(data.before(turma.getDataTermino())) {
+					System.out.println("Ainda não é a data para abrir a cápsula!");	
+					}
+					else					
+					CriptoDecripto.DecifrarTexto(ler);					
 				}
 			}
 		} 			
 		// Tratamento de exceções
 		catch(InputMismatchException error) {
-			System.out.println("Valor válido!");
+			System.out.println("Valor inválido!");
 		}
 		catch(NumberFormatException error) {
 			System.out.println("Número fora do range!");
 		}				
+		catch(NullPointerException error) {	
+			System.out.println("A lista de pessoas está vazia!");
+		}
+			
 		ler.close();
+		System.out.println("Fim do programa!");
 	}	
 }

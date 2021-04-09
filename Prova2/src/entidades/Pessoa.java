@@ -2,19 +2,19 @@ package entidades;
 
 public class Pessoa {
 	
-	private Integer cpf;
+	private String cpf;
 	private String nome; 
 	private String endereco; 
 	private Integer celular; 
 	private String email;
 	private String loginUsuario;
 	private String loginSenha;
-	private String chaveRecuperacao;
+	private static String chaveRecuperacao;
 	
 	public Pessoa() {		
 	}
 	
-	public Pessoa(Integer cpf, String nome, String endereco, Integer celular, String email, String loginUsuario, String loginSenha, String chaveRecuperacao) {
+	public Pessoa(String cpf, String nome, String endereco, Integer celular, String email, String loginUsuario, String loginSenha, String chaveRecuperacao) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.endereco = endereco;
@@ -25,11 +25,11 @@ public class Pessoa {
 		this.chaveRecuperacao = chaveRecuperacao;
 	}
 
-	public Integer getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(Integer cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
@@ -65,7 +65,7 @@ public class Pessoa {
 		this.email = email;
 	}
 	
-	public String setUsuario() {
+	public String getUsuario() {
 		return loginUsuario;
 	}
 	
@@ -77,13 +77,9 @@ public class Pessoa {
 		this.loginSenha = loginSenha;
 	}
 	
-	public String setChaveRecuperacao() {
+	public static String getChaveRecuperacao() {
 		return chaveRecuperacao;
 	}
-	
-	
-	
-	
 		
 	public static void ListarPessoas(Pessoa[] Pessoa){ 
 		for (Pessoa p : Pessoa) {

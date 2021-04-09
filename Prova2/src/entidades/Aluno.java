@@ -7,7 +7,7 @@ public class Aluno extends Pessoa{
 	public Aluno() {		
 	}
 	
-	public Aluno(Integer cpf, String nome, String endereco, Integer celular, String email, String loginUsuario, String loginSenha, Integer matriculaAcademica, String chaveRecuperacao) {
+	public Aluno(String cpf, String nome, String endereco, Integer celular, String email, String loginUsuario, String loginSenha, Integer matriculaAcademica, String chaveRecuperacao) {
 		super(cpf, nome, endereco, celular, email, loginUsuario, loginSenha, chaveRecuperacao);
 		this.matriculaAcademica = matriculaAcademica;
 	}

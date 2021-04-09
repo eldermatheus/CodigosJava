@@ -3,7 +3,7 @@ package entidades;
 import java.util.Date;
 
 public class Turma {
-	
+		
 	private String titulo; 
 	private Date dataInicio; 
 	private Date dataTermino;
