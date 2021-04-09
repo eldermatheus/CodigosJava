@@ -86,6 +86,6 @@ public class CriptoDecripto {
 	    } catch (NullPointerException e) {
 	        System.err.printf("Arquivo vazio!");		
 		}
-	}	
+	}		
 }
 
