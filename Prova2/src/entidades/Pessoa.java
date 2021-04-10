@@ -8,21 +8,19 @@ public class Pessoa {
 	private Integer celular; 
 	private String email;
 	private String loginUsuario;
-	private String loginSenha;
-	private static String chaveRecuperacao;
+	private String loginSenha;	
 	
 	public Pessoa() {		
 	}
 	
-	public Pessoa(String cpf, String nome, String endereco, Integer celular, String email, String loginUsuario, String loginSenha, String chaveRecuperacao) {
+	public Pessoa(String cpf, String nome, String endereco, Integer celular, String email, String loginUsuario, String loginSenha) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.endereco = endereco;
 		this.celular = celular;
 		this.email = email;
 		this.loginUsuario = loginUsuario;
-		this.loginSenha = loginSenha;
-		this.chaveRecuperacao = chaveRecuperacao;
+		this.loginSenha = loginSenha;		
 	}
 
 	public String getCpf() {
@@ -76,11 +74,7 @@ public class Pessoa {
 	public void setSenha(String loginSenha) {
 		this.loginSenha = loginSenha;
 	}
-	
-	public static String getChaveRecuperacao() {
-		return chaveRecuperacao;
-	}
-		
+
 	public static void ListarPessoas(Pessoa[] Pessoa){ 
 		for (Pessoa p : Pessoa) {
 			System.out.println(
@@ -90,5 +84,6 @@ public class Pessoa {
 				" |Celular: " + p.getCelular() +  
 				" |Email: " + p.getEmail());
 		}
-	}	
+	}
+		
 }

@@ -27,13 +27,13 @@ public class CriptoDecripto {
 		
 		try {
 			//Cria o arquivo 
-			File arquivo = new File("C:\\Users\\USUARIO\\Desktop\\Arquivo.txt");
+			File arquivo = new File("C:\\Users\\elder\\Desktop\\Arquivo.txt");
 			arquivo.createNewFile();
 			FileWriter fw = new FileWriter(arquivo, true);
 	        BufferedWriter bw = new BufferedWriter(fw);
 	        
 	        //Escreve mensagem no arquivo
-			pw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:\\Users\\USUARIO\\Desktop\\Arquivo.txt"),"UTF8"));
+			pw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:\\Users\\elder\\Desktop\\Arquivo.txt"),"UTF8"));
 			pw.write(mensagemCriptografada);
 			pw.flush();
 			pw.close();
@@ -47,11 +47,10 @@ public class CriptoDecripto {
 		}
 	}	
 	
-	
 	public static void DecifrarTexto(Scanner ler) {
 		try {
 		    //Leitura do caminho do arquivo  
-			FileReader arq = new FileReader("C:\\Users\\USUARIO\\Desktop\\Arquivo.txt");
+			FileReader arq = new FileReader("C:\\Users\\elder\\Desktop\\Arquivo.txt");
 		    BufferedReader lerArquivo = new BufferedReader(arq);
 
 		    //Leitura do conteúdo
@@ -65,10 +64,11 @@ public class CriptoDecripto {
 		    System.out.println("Qual a chave de recuperação do aluno?");
 		    String chaveAlunoTeste = ler.nextLine();		    
 		    
-		    System.out.println("Qual a chave de recuperação do aluno?");
+		    System.out.println("Qual a chave de recuperação do professor?");
 		    String chaveProfessorTeste = ler.nextLine();
 		    
-		    if (Professor.getChaveRecuperacao().equals(chaveProfessorTeste) && Aluno.getChaveRecuperacao().equals(chaveAlunoTeste)) {
+		    		    		   		    
+		    if (Professor.getChaveRecuperacaoProfessor().equals(chaveProfessorTeste) && Aluno.getChaveRecuperacaoAluno().equals(chaveAlunoTeste)) {
 			    
 		    	byte [] primeiraCriptografia = Base64.decodeBase64(linha);
 			    String primeiraMsgDecodificacao = new String(primeiraCriptografia);			    
@@ -76,6 +76,7 @@ public class CriptoDecripto {
 			    byte [] segundaCriptografia = Base64.decodeBase64(primeiraMsgDecodificacao);
 			    String mensagemFinalDecodificada = new String(segundaCriptografia);			    
 				
+			    primeiraMsgDecodificacao
 			    System.out.println(mensagemFinalDecodificada);		
 		    	
 		    } else 		    	

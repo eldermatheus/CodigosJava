@@ -6,13 +6,19 @@ import java.util.Scanner;
 public class Professor extends Pessoa{
 	
 	private Integer matriculaFuncional;
+	private static String chaveRecuperacaoProfessor;
 	
 	public Professor() {		
 	}
 	
-	public Professor(String cpf, String nome, String endereço, Integer celular, String email, String loginUsuario, String loginSenha, Integer matriculaFuncional, String chaveRecuperacao) {
-		super(cpf, nome, endereço, celular, email, loginUsuario, loginSenha, chaveRecuperacao);
+	public Professor(String cpf, String nome, String endereço, Integer celular, String email, String loginUsuario, String loginSenha, Integer matriculaFuncional, String chaveRecuperacaoProfessor) {
+		super(cpf, nome, endereço, celular, email, loginUsuario, loginSenha);
 		this.matriculaFuncional = matriculaFuncional;
+		this.chaveRecuperacaoProfessor = chaveRecuperacaoProfessor;
+	}
+
+	public static String getChaveRecuperacaoProfessor() {
+		return chaveRecuperacaoProfessor;
 	}
 
 	public Integer getMatriculaFuncional() {

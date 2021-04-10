@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import entidades.Aluno;
 import entidades.Instituicao;
 import entidades.Pessoa;
 import entidades.Professor;
@@ -21,8 +22,10 @@ public class Programa {
 		
 			Instituicao instituicao = new Instituicao(12346, "Instituto Federal de Tencnolgoia","IFS", "Rua A Nº 1", 34313431, "ifs@academico.com");
 		
-			Professor professor = new Professor("56789", "Sidney", "Rua B Nº 2", 34313432, "sidney@academico.com", "usu@rio1", "senha1234",11111, "chave3431");
-		
+			Professor professor = new Professor("56789", "Sidney", "Rua B Nº 2", 34313432, "sidney@academico.com", "usu@rio1", "senha1234",11111, "4321");
+			
+			Aluno aluno = new Aluno();
+			
 			Turma turma = new Turma("1ª Turma CCOMP", formato.parse("02/01/2020"), formato.parse("30/04/2021"), "teste", "Aluno1");		
 		
 		//Abrindo o Scanner e criando o vetor
@@ -92,11 +95,17 @@ public class Programa {
 				if (resp == '9') {
 					
 					//Checa se é a data certa para abrir a capsula
-					if(data.before(turma.getDataTermino())) {
+					/*if(data.before(turma.getDataTermino())) {
 					System.out.println("Ainda não é a data para abrir a cápsula!");	
 					}
-					else					
+					else	*/				
 					CriptoDecripto.DecifrarTexto(ler);					
+				}
+				
+				if (resp == '0') {
+									
+					System.out.println(Professor.getChaveRecuperacaoProfessor());
+					System.out.println(Aluno.getChaveRecuperacaoAluno());
 				}
 			}
 		} 			
